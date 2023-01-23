@@ -11,6 +11,7 @@ int main(void)
 	_printf("My name is %s.\n", "Nelson II");
 	_printf("My first name is %s, my second name is %s.\n", "Nelson II", "Sp3rtah");
 	_printf("My name is %r.\n", "Nelson II");
+	_printf("Printing my number %d\n", 4020);
 
 	return (0);
 }

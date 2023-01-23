@@ -13,6 +13,8 @@ int print_all(char c, va_list ap)
 	identifier_t ids[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"d", print_d},
+		{"i", print_d},
 		{NULL, NULL}
 	};
 

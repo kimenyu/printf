@@ -1,5 +1,17 @@
 #include "main.h"
 
+
+/**
+ * print_d - prints out an integer
+ * @ap: va_list
+ *
+ * Return: count of character printed
+ */
+int print_d(va_list ap)
+{
+	return (print_num(va_arg(ap, int)));
+}
+
 /**
  * print_c - prints out a character
  * @ap: va_list
