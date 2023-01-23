@@ -1,8 +1,35 @@
 #include "main.h"
 #include <stdio.h>
+/**
+ * print_bin - prints number
+ * @n: number to be printed
+ *
+ * Return: nothing, void.
+ */
+int print_bin(int n)
+{
+	unsigned int count, num;
+
+	count = 0;
+
+	if (n < 0)
+	{
+		num = n * -1;
+		count += _putchar('-');
+	}
+	else
+		num = n;
+
+	if (num / 2)
+		count += print_num(num / 2);
+
+	count += _putchar((num % 2) + '0');
+
+	return (count);
+}
 
 /**
- * _printnum - prints number
+ * print_num - prints number
  * @n: number to be printed
  *
  * Return: nothing, void.
