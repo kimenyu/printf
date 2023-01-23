@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include <stdio.h>
-#include <stdbool.h>
 #include "main.h"
 
 /**
@@ -12,9 +11,9 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	static bool is_specifier;
+	char is_specifier;
 
-	is_specifier = false;
+	is_specifier = 0;
 	va_start(ap, format);
 
 	while (*format)
@@ -27,13 +26,13 @@ int _printf(const char *format, ...)
 		}
 		else if (*format == '%')
 		{
-			is_specifier = true;
+			is_specifier = 1;
 			format++;
 			continue;
 		}
 
 		print_all(*format++, ap);
-		is_specifier = false;
+		is_specifier = 0;
 	}
 
 	va_end(ap);
