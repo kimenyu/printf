@@ -6,6 +6,7 @@
  */
 int main(void)
 {
+	_printf("This is a simple sentence\n");
 	_printf("My first name character is %c.\n", 'N');
 	_printf("My name is %s.\n", "Nelson II");
 
