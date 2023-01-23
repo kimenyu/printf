@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _printnum - prints number
@@ -15,8 +14,7 @@ int print_num(int n)
 
 	if (n < 0)
 	{
-		_putchar('-');
-		count++;
+		count += _putchar('-');
 		n = n * -1;
 	}
 
