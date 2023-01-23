@@ -1,16 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdbool.h>
-
-/**
- * _print_c - Print a char
- * @format: format string to use
- * Return: int
- */
-int _print_c()
-{
-	return (0);
-}
+#include "main.h"
 
 /**
  * _printf - Print a formatted string
@@ -20,8 +11,6 @@ int _print_c()
  */
 int _printf(const char *format, ...)
 {
-	char c;
-	char *s;
 	va_list ap;
 	static bool is_specifier;
 
@@ -32,7 +21,7 @@ int _printf(const char *format, ...)
 	{
 		if (!is_specifier && (*format) != '%')
 		{
-			printf("%c", *format);
+			_putchar(*format);
 			format++;
 			continue;
 		}
@@ -43,24 +32,11 @@ int _printf(const char *format, ...)
 			continue;
 		}
 
-		switch (*format++)
-		{
-			case 'c':
-				c = (char) va_arg(ap, int);
-				printf("%c", c);
-				is_specifier = false;
-				break;
-			case 's':
-				{
-					s = va_arg(ap, char*);
-					printf("%s", s);
-					is_specifier = false;
-					break;
-				}
-			default:
-				continue;
-		}
+		print_all(*format++, ap);
+		is_specifier = false;
 	}
+
+	va_end(ap);
 	return (0);
 }
 
