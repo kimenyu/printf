@@ -15,6 +15,7 @@ int print_all(char c, va_list ap)
 		{"s", print_s},
 		{"d", print_d},
 		{"i", print_d},
+		{"b", print_b},
 		{NULL, NULL}
 	};
 

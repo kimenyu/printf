@@ -9,10 +9,12 @@ extern int print_all(char, va_list);
 extern int print_c(va_list);
 extern int print_s(va_list);
 extern int print_d(va_list);
+extern int print_b(va_list);
 extern int _putchar(char c);
 extern long count_place(long n);
 extern int count_printed(int n);
 extern int print_num(int n);
+extern int print_bin(unsigned int n);
 
 /**
  * identifier - struct that  holds a string identifier and a function pointer

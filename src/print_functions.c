@@ -2,6 +2,17 @@
 
 
 /**
+ * print_b - prints out an integer in binary
+ * @ap: va_list
+ *
+ * Return: count of character printed
+ */
+int print_b(va_list ap)
+{
+	return (print_bin(va_arg(ap, unsigned int)));
+}
+
+/**
  * print_d - prints out an integer
  * @ap: va_list
  *
