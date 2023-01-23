@@ -16,6 +16,10 @@ int print_all(char c, va_list ap)
 		{"d", print_d},
 		{"i", print_d},
 		{"b", print_b},
+		{"u", print_u},
+		{"o", print_o},
+		{"x", print_x},
+		{"X", print_X},
 		{NULL, NULL}
 	};
 
@@ -27,6 +31,5 @@ int print_all(char c, va_list ap)
 			count = ids[i].print(ap);
 		i++;
 	}
-	
 	return (count);
 }

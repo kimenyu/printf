@@ -1,6 +1,7 @@
 #include "main.h"
 #include <limits.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point
@@ -8,11 +9,18 @@
  */
 int main(void)
 {
-	_printf("Printing my number %b\n", 1);
-	_printf("Printing my number %b\n", 2);
-	_printf("Printing my number %b\n", 4);
-	_printf("Printing my number %b\n", 8);
-	_printf("Printing my number %b\n", 98);
+	void *ptr;
+
+	ptr = malloc(1);
+
+	_printf("Printing my number %u\n", 98);
+	_printf("Printing my number %o\n", 98);
+	_printf("Printing my number %x\n", 98);
+	_printf("Printing my number %X\n", 98);
+	_printf("Printing my number %X\n", 255);
+	printf("Printing my number %X\n", 255);
+
+	free(ptr);
 
 	return (0);
 }

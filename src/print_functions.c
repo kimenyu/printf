@@ -29,7 +29,7 @@ int print_d(va_list ap)
  *
  * Return: count of character printed
  */
-int print_c (va_list ap)
+int print_c(va_list ap)
 {
 	_putchar(va_arg(ap, int));
 	return (1);
