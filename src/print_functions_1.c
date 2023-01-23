@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * print_b - prints out an integer in binary
  * @ap: va_list
@@ -20,7 +19,7 @@ int print_b(va_list ap)
  */
 int print_d(va_list ap)
 {
-	return (print_num(va_arg(ap, int)));
+	return (print_int(va_arg(ap, int)));
 }
 
 /**
@@ -31,8 +30,7 @@ int print_d(va_list ap)
  */
 int print_c(va_list ap)
 {
-	_putchar(va_arg(ap, int));
-	return (1);
+	return (_putchar(va_arg(ap, int)));
 }
 
 /**
@@ -43,17 +41,5 @@ int print_c(va_list ap)
  */
 int print_s(va_list ap)
 {
-	char *str;
-	int count;
-
-	count = 0;
-	str = va_arg(ap, char *);
-
-	while (str[count])
-	{
-		_putchar(str[count]);
-		count++;
-	}
-
-	return (count);
+	return (print_str(va_arg(ap, char *)));
 }

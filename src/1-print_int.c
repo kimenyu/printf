@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * print_num - prints number
+ * print_int- prints number
  * @n: number to be printed
  *
  * Return: nothing, void.
  */
-int print_num(int n)
+int print_int(int n)
 {
 	unsigned int count, num;
 
@@ -22,7 +22,7 @@ int print_num(int n)
 		num = n;
 
 	if (num / 10)
-		count += print_num(num / 10);
+		count += print_int(num / 10);
 
 	count += _putchar((num % 10) + '0');
 

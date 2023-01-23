@@ -11,7 +11,7 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	char is_specifier;
+	int is_specifier;
 
 	is_specifier = 0;
 	va_start(ap, format);
@@ -20,8 +20,7 @@ int _printf(const char *format, ...)
 	{
 		if (!is_specifier && (*format) != '%')
 		{
-			_putchar(*format);
-			format++;
+			_putchar(*format++);
 			continue;
 		}
 		else if (*format == '%')
