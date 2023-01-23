@@ -25,8 +25,8 @@ extern int print_hex(unsigned int);
 extern int print_HEX(unsigned int);
 
 /**
- * identifier - struct that  holds a string identifier and a function pointer
- * @format: the format specifier
+ * struct identifier - holds a string identifier and a function pointer
+ * @s: the format specifier
  * @print: pointer to the appropriate function to call
  */
 typedef struct identifier

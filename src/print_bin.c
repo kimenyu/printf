@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * _print_bin - prints number
- * @n: number to be printed
+ * print_bin - prints number
+ * @num: number to be printed
  *
  * Return: nothing, void.
  */
