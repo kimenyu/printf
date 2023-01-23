@@ -10,7 +10,7 @@ extern int print_c(va_list);
 extern int print_s(va_list);
 extern int print_d(va_list);
 extern int _putchar(char c);
-extern int count_place(int n);
+extern long count_place(long n);
 extern int count_printed(int n);
 extern int print_num(int n);
 
