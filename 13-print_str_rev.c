@@ -22,5 +22,7 @@ int print_str_rev(char *str)
 	while (rev >= 0)
 		_putchar(str[rev--]);
 
+	_putchar('\0');
+
 	return (++count);
 }
