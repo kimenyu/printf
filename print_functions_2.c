@@ -1,6 +1,19 @@
 #include "main.h"
 
 /**
+ * print_p - prints out an unsigned integer
+ * @ap: va_list
+ *
+ * Return: count of character printed
+ */
+int print_p(va_list ap)
+{
+	_putchar('0');
+	_putchar('x');
+	return (print_addr(va_arg(ap, unsigned long int)) + 2);
+}
+
+/**
  * print_u - prints out an unsigned integer
  * @ap: va_list
  *

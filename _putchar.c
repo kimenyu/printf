@@ -9,5 +9,12 @@
  */
 int _putchar(char c)
 {
+	/* static int total; */
+	/* static unsigned char buff[1024]; */
+
+	/* if (total & (c == '\n')) */
+	/* { */
+	/* 	for (i = 0; i < total; ) */
+	/* } */
 	return (write(1, &c, 1));
 }

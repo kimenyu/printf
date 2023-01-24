@@ -20,6 +20,7 @@ int print_all(char c, va_list ap)
 		{"o", print_o},
 		{"x", print_x},
 		{"X", print_X},
+		{"p", print_p},
 		{NULL, NULL}
 	};
 
