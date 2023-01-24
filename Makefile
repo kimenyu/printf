@@ -1,8 +1,8 @@
 CC := gcc
 CFLAGS := -Wall -Werror -Wextra -pedantic -std=gnu89
 
-SRC := *.c
-HEADERS := *.h
+SRC := *.c test/*.c
+HEADERS := *.h test/*.h
 TARGET := final.out
 
 run: $(TARGET)
