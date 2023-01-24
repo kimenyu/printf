@@ -15,10 +15,11 @@ int print_str_rev(char *str)
 	while (str[rev])
 		rev++;
 
-	count = rev;
-
 	while (rev >= 0)
+	{
 		_putchar(str[rev--]);
+		count++;
+	}
 
 	return (count);
 }
