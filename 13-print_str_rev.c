@@ -20,7 +20,11 @@ int print_str_rev(char *str)
 	rev--;
 	
 	while (rev >= 0)
-		_putchar(str[rev--]);
+	{
+		_putchar(str[rev]);
+		rev--;
+		
+	}
 
 	_putchar('\0');
 
