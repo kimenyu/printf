@@ -55,7 +55,7 @@ int print_s(va_list ap)
  */
 int print_s_r(va_list ap)
 {
-	char * str;
+	char *str;
 	int count;
 
 	str = va_arg(ap, char *);
