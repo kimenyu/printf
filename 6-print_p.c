@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <limits.h>
 
 /**
  * print_addr - prints addr
@@ -12,7 +13,13 @@ int print_addr(unsigned long int num)
 	unsigned int count;
 
 	count = 0;
-	count += print_hex(num);
+	if (num / 16)
+		count += print_addr(num / 16);
+
+	if ((num % 16) > 9)
+		count += _putchar((num % 16) + 87);
+	else
+		count += _putchar((num % 16) + '0');
 
 	return (count);
 }
