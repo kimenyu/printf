@@ -43,3 +43,15 @@ int print_s(va_list ap)
 {
 	return (print_str(va_arg(ap, char *)));
 }
+
+
+/**
+ * print_s_r - prints out a string in reverse
+ * @ap: va_list
+ *
+ * Return: count of characters printed
+ */
+int print_s_r(va_list ap)
+{
+	return (print_str_rev(va_arg(ap, char *)));
+}
