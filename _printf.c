@@ -11,16 +11,16 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int is_specifier;
+	int is_specifier, count;
 
-	is_specifier = 0;
+	is_specifier = 0, count = 0;
 	va_start(ap, format);
 
 	while (*format)
 	{
 		if (!is_specifier && (*format) != '%')
 		{
-			_putchar(*format++);
+			count += _putchar(*format++);
 			continue;
 		}
 		else if (*format == '%')
@@ -30,11 +30,11 @@ int _printf(const char *format, ...)
 			continue;
 		}
 
-		print_all(*format++, ap);
+		count += print_all(*format++, ap);
 		is_specifier = 0;
 	}
 
 	va_end(ap);
-	return (0);
+	return (count);
 }
 
