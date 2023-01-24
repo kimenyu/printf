@@ -17,8 +17,6 @@ int print_str_rev(char *str)
 
 	count = rev;
 
-	rev--;
-
 	while (rev >= 0)
 		_putchar(str[rev--]);
 
