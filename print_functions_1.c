@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <string.h>
 
 /**
  * print_b - prints out an integer in binary
@@ -53,5 +55,11 @@ int print_s(va_list ap)
  */
 int print_s_r(va_list ap)
 {
-	return (print_str_rev(va_arg(ap, char *)));
+	char * str;
+	int count;
+
+	str = va_arg(ap, char *);
+	count = print_str_rev(str);
+
+	return (count);
 }
