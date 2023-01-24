@@ -21,3 +21,4 @@ int print_HEX(unsigned int num)
 		count += _putchar((num % 16) + '0');
 	return (count);
 }
+
