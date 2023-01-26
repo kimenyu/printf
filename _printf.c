@@ -27,7 +27,8 @@ int _printf(const char *format, ...)
 		{
 			if (is_specifier)
 			{
-				count += _putchar(*format++);
+				count += _putchar(*format);
+				format++;
 				is_specifier = 0;
 			}
 			else
@@ -38,7 +39,8 @@ int _printf(const char *format, ...)
 			continue;
 		}
 
-		count += print_all(*format++, ap);
+		count += print_all(*format, ap);
+		format++;
 		is_specifier = 0;
 	}
 

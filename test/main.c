@@ -47,8 +47,7 @@ int main(void)
 
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
-	printf("%S\n", (wchar_t *)L"Best\nSchool");
-	_printf("%s\n", (char *)NULL);
+	_printf("%S\n", "Best\nSchool");
 
 	return (0);
 }
