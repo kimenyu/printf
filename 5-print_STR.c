@@ -8,24 +8,24 @@
  */
 int print_STR(char *str)
 {
-	int count;
+	int count, i;
 
-	count = 0;
+	count = 0, i = 0;
 
 	while (str[count])
 	{
 		if ((str[count] > 0 && str[count] < 32) || (str[count] >= 127))
 		{
-			_putchar('\\');
-			_putchar('x');
+			i += _putchar('\\');
+			i += _putchar('x');
 
 			if (str[count] < 16)
-				_putchar('0');
+				i += _putchar('0');
 
-			print_HEX(str[count++]);
+			i += print_HEX(str[count++]);
 			continue;
 		}
-		_putchar(str[count++]);
+		i += _putchar(str[count++]);
 	}
-	return (count + 3);
+	return (i);
 }
