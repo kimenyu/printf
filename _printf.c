@@ -1,6 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * _printf - Print a formatted string
@@ -12,6 +13,9 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	int is_specifier, count;
+
+	if (format == NULL)
+		exit(1);
 
 	is_specifier = 0, count = 0;
 	va_start(ap, format);
