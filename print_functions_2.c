@@ -14,13 +14,13 @@ int print_p(va_list ap)
 
 	if (i == 0)
 	{
-		return (print_addr(0));
+		return (print_str("(nil)"));
 	}
 	else
 	{
 		_putchar('0');
 		_putchar('x');
-		return (print_addr(i + 2));
+		return (print_addr(i) + 2);
 	}
 }
 
