@@ -24,6 +24,7 @@ int print_all(char c, va_list ap)
 		{"x", print_x},
 		{"X", print_X},
 		{"p", print_p},
+		{"R", print_rot},
 		{NULL, NULL}
 	};
 

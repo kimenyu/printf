@@ -17,6 +17,7 @@ extern int print_o(va_list);
 extern int print_x(va_list);
 extern int print_X(va_list);
 extern int print_p(va_list);
+extern int print_rot(va_list);
 /* ***/
 extern int _putchar(char);
 extern int print_int(int);
@@ -29,6 +30,7 @@ extern int print_oct(unsigned int);
 extern int print_hex(unsigned int);
 extern int print_HEX(unsigned int);
 extern int print_addr(unsigned long int);
+
 
 /**
  * struct identifier - holds a string identifier and a function pointer
