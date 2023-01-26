@@ -13,6 +13,11 @@ int count, i, j;
 char *letter = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char *encode = " nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
+if (s == NULL)
+{
+print_str("(nil)");
+}
+
 for (i = 0, count = 0; *(s + i) != '\0'; i++)
 {
 for (j = 0; *(letter + j) != '\0'; j++)
