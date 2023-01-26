@@ -15,7 +15,7 @@ char *encode = " nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 if (s == NULL)
 {
-print_str("(nil)");
+print_str("(avy)");
 }
 
 for (i = 0, count = 0; *(s + i) != '\0'; i++)
