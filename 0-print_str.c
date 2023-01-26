@@ -12,6 +12,9 @@ int print_str(char *str)
 
 	count = 0;
 
+	if (str == NULL)
+		print_str("(nil)");
+
 	while (str[count])
 		_putchar(str[count++]);
 
