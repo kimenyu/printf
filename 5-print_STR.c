@@ -27,8 +27,5 @@ int print_STR(char *str)
 		}
 		_putchar(str[count++]);
 	}
-
-		_putchar('\n');
-
-	return (count);
+	return (count + 3);
 }

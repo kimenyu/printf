@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "../main.h"
 #include <limits.h>
+#include <wchar.h>
 
 /**
  * main - Entry point
@@ -46,7 +47,7 @@ int main(void)
 
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
-	_printf("%S", "Best\nSchool");
+	printf("%S\n", (wchar_t *)L"Best\nSchool");
 	_printf("%s\n", (char *)NULL);
 
 	return (0);
