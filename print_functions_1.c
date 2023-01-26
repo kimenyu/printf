@@ -32,7 +32,7 @@ int print_d(va_list ap)
  */
 int print_c(va_list ap)
 {
-	return (_putchar(va_arg(ap, int)));
+	return (_putchar((char)va_arg(ap, int)));
 }
 
 /**
