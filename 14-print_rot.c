@@ -29,6 +29,7 @@ break;
 }
 }
 }
+count += _putchar('\0');
 
 return (count);
 }
