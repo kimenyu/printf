@@ -1,18 +1,12 @@
 CC := gcc
 CFLAGS := -Wall -Werror -Wextra -pedantic -std=gnu89
 
-SRC := *.c test/*.c
-HEADERS := *.h test/*.h
-TARGET := final.out
+SRC := *.c
 
-run: $(TARGET)
-	@./$<
-
-$(TARGET): $(SRC)
-	$(CC) $(CFLAGS) $^ -o $@
+# todo: compile and run tests. `make test`
 
 man:
 	pandoc doc/printf.3.md -s -t man | /usr/bin/man -l -
 
 clean:
-	@rm -rf $(TARGET)
+	@rm -rf $(TARGET) *.o *.so *.a

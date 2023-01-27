@@ -8,9 +8,20 @@
  */
 int print_p(va_list ap)
 {
-	_putchar('0');
-	_putchar('x');
-	return (print_addr(va_arg(ap, unsigned long int)) + 2);
+	unsigned long int i;
+
+	i = va_arg(ap, unsigned long int);
+
+	if (i == 0)
+	{
+		return (print_str("(nil)"));
+	}
+	else
+	{
+		_putchar('0');
+		_putchar('x');
+		return (print_addr(i) + 2);
+	}
 }
 
 /**
@@ -56,4 +67,3 @@ int print_X(va_list ap)
 {
 	return (print_HEX(va_arg(ap, unsigned int)));
 }
-

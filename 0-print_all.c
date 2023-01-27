@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_all - prints parameters
@@ -13,6 +14,7 @@ int print_all(char c, va_list ap)
 	identifier_t ids[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"S", print_S},
 		{"r", print_s_r},
 		{"d", print_d},
 		{"i", print_d},
@@ -22,6 +24,7 @@ int print_all(char c, va_list ap)
 		{"x", print_x},
 		{"X", print_X},
 		{"p", print_p},
+		{"R", print_rot},
 		{NULL, NULL}
 	};
 
